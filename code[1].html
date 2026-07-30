@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TireMaster Zhitikara | Профессиональный шиномонтаж</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#ffffff",
+                        "surface-dim": "#cbdbf5",
+                        "inverse-surface": "#213145",
+                        "surface-variant": "#d3e4fe",
+                        "surface-container-high": "#dce9ff",
+                        "primary-fixed-dim": "#b7c4ff",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#f8f9ff",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#131b2e",
+                        "on-secondary-fixed-variant": "#3f465c",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#191c1e",
+                        "on-primary-container": "#dfe3ff",
+                        "on-surface-variant": "#434656",
+                        "tertiary": "#4b4e50",
+                        "secondary-fixed": "#dae2fd",
+                        "on-primary-fixed": "#001452",
+                        "inverse-on-surface": "#eaf1ff",
+                        "primary-fixed": "#dde1ff",
+                        "surface-container": "#e5eeff",
+                        "surface-tint": "#004ced",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#e2e4e6",
+                        "background": "#f8f9ff",
+                        "on-secondary-container": "#5c647a",
+                        "outline": "#737688",
+                        "secondary": "#565e74",
+                        "secondary-fixed-dim": "#bec6e0",
+                        "surface-container-low": "#eff4ff",
+                        "secondary-container": "#dae2fd",
+                        "on-surface": "#0b1c30",
+                        "primary": "#003ec7",
+                        "surface-container-highest": "#d3e4fe",
+                        "surface": "#f8f9ff",
+                        "on-background": "#0b1c30",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#0052ff",
+                        "inverse-primary": "#b7c4ff",
+                        "tertiary-container": "#636668",
+                        "outline-variant": "#c3c5d9",
+                        "tertiary-fixed": "#e0e3e5",
+                        "on-primary-fixed-variant": "#0038b6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-md": "16px",
+                        "gutter": "24px",
+                        "section-gap": "120px",
+                        "margin-x": "32px",
+                        "stack-sm": "8px",
+                        "container-max": "1280px",
+                        "stack-lg": "32px"
+                    },
+                    "fontFamily": {
+                        "headline-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-bold": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "display-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "display-lg": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "800"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .text-stroke-primary {
+            -webkit-text-stroke: 1px #003ec7;
+            color: transparent;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .service-card:hover .service-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant">
+<nav class="flex justify-between items-center px-margin-x h-20 max-w-container-max mx-auto">
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface uppercase tracking-tight">
+                TireMaster <span class="text-primary">Zhitikara</span>
+</div>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#services">Services</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#benefits">Benefits</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#location">Location</a>
+<a class="bg-on-surface text-surface py-2 px-6 font-label-bold flex items-center gap-2 active:scale-95 transition-transform" href="tel:+77769980634">
+<span class="material-symbols-outlined text-[20px]">call</span>
+                    Call Now
+                </a>
+</div>
+<button class="md:hidden text-on-surface" id="mobile-menu-toggle">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+</header>
+<main class="overflow-x-hidden">
+<!-- Hero Section -->
+<section class="relative h-screen flex items-center pt-20">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-on-background to-transparent z-10 opacity-80 md:opacity-90"></div>
+<div class="w-full h-full" data-alt="A high-contrast cinematic shot of a professional tire service bay. A premium sports car is lifted on a jack, with the focus on a sleek tire and a mechanic's gloved hand holding a pneumatic wrench. The lighting is cold and industrial with sharp highlights and deep shadows, emphasizing a clean and high-tech automotive environment. The overall mood is professional, efficient, and precise, utilizing a palette of deep blacks and sharp metallic blues." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAz7VkpmG7tWCwFluClwAsneBH3h4SLikw3mvrZIoN8zBxM9xqwXlmB8LGsJKx26Uqpo4TgJSDVbEN-OWspbgLJzFA2wovtwRIxW-U-vT1txlhODl1cT7ul5Fsx_P4ggBdce-D2CZUGVNek8210z8OtLi6c5u_mlsboZ1uEbVjX67QvtcYwEIX_Tqlmr2IqeGghxsT5oMCglqwQ4X39JqFB0HKfTKPbs19WxNm1Arq6u3bwZJt3ICdfCw')"></div>
+</div>
+<div class="relative z-20 px-margin-x max-w-container-max mx-auto w-full">
+<div class="max-w-3xl">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-surface mb-stack-md leading-tight">
+                        Профессиональный <span class="text-primary">шиномонтаж</span> в Житикаре
+                    </h1>
+<p class="font-body-lg text-body-lg text-surface-variant/90 mb-stack-lg max-w-xl">
+                        Быстрая запись, современное оборудование и гарантия качества. Мы заботимся о вашей безопасности на дороге.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-gutter">
+<a class="bg-primary text-on-primary py-4 px-10 font-label-bold flex items-center justify-center gap-3 hover:bg-primary-container transition-colors transition-transform active:scale-95" href="https://wa.me/77769980634" target="_blank">
+                            Записаться через WhatsApp
+                            <span class="material-symbols-outlined">send</span>
+</a>
+<a class="border border-surface text-surface py-4 px-10 font-label-bold flex items-center justify-center hover:bg-surface hover:text-on-surface transition-all transition-transform active:scale-95" href="#services">
+                            Наши услуги
+                        </a>
+</div>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+<span class="material-symbols-outlined text-surface-variant">expand_more</span>
+</div>
+</section>
+<!-- Benefits Section -->
+<section class="py-section-gap bg-surface px-margin-x" id="benefits">
+<div class="max-w-container-max mx-auto">
+<div class="mb-stack-lg flex flex-col md:flex-row md:items-end justify-between gap-stack-md">
+<div>
+<span class="text-primary font-label-bold uppercase tracking-widest block mb-stack-sm">Преимущества</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Почему выбирают нас?</h2>
+</div>
+<div class="h-1 w-24 bg-primary"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mt-stack-lg">
+<!-- Benefit 1 -->
+<div class="p-stack-lg border border-outline-variant hover:border-primary transition-colors group">
+<div class="w-16 h-16 bg-surface-container-low flex items-center justify-center mb-stack-md group-hover:bg-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-primary text-[40px] group-hover:text-on-primary transition-colors">speed</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-stack-sm">Скорость</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Полная переобувка комплекта колес всего за 20 минут. Ценим ваше время без ущерба качеству.</p>
+</div>
+<!-- Benefit 2 -->
+<div class="p-stack-lg border border-outline-variant hover:border-primary transition-colors group">
+<div class="w-16 h-16 bg-surface-container-low flex items-center justify-center mb-stack-md group-hover:bg-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-primary text-[40px] group-hover:text-on-primary transition-colors">precision_manufacturing</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-stack-sm">Точность</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Используем высокоточное немецкое балансировочное оборудование последнего поколения.</p>
+</div>
+<!-- Benefit 3 -->
+<div class="p-stack-lg border border-outline-variant hover:border-primary transition-colors group">
+<div class="w-16 h-16 bg-surface-container-low flex items-center justify-center mb-stack-md group-hover:bg-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-primary text-[40px] group-hover:text-on-primary transition-colors">coffee</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-stack-sm">Комфорт</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Уютная зона ожидания с бесплатным кофе, Wi-Fi и панорамным видом на рабочую зону.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Bento Grid -->
+<section class="py-section-gap bg-surface-container-low px-margin-x overflow-hidden" id="services">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-section-gap">
+<h2 class="font-display-lg-mobile md:font-headline-md text-on-surface uppercase mb-stack-sm">Наши Услуги</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Комплексный уход за колесами вашего автомобиля с применением передовых технологий.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Seasonal Tire Change -->
+<div class="md:col-span-8 group relative h-[400px] overflow-hidden">
+<div class="absolute inset-0 bg-on-background/40 group-hover:bg-on-background/20 transition-all duration-500 z-10"></div>
+<div class="w-full h-full transition-transform duration-700 group-hover:scale-110" data-alt="A macro shot of a car tire tread in light mode studio lighting. The lighting emphasizes the texture and geometry of the rubber. The scene is clean, minimal, and focuses on technical excellence. Subtle blue light reflections give it a modern, professional tire shop feel." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCprzZCus2p7Cr9Q_hAYNuhAYHPecDh8lKp0CYojoz-0bhko_ADX49V8cCAnj3ID1WQEP94rdlNvsZEgIuxkxTn0KkkNeo8uM1Lsg7kwH0zRHTrdq342ZjMc_aT-cS9F_W7aT6dxaFcRj03qYp9g4JFJ5fhft-cVG0rtDgy9JQpgfy5sap8bDm3CFVHEbQlpCUPtBhbfbCNJf1RaiuhOLoITc2NCulrSyVjvtqz2lGN3VATVwEeYIP6IQ')"></div>
+<div class="absolute bottom-0 left-0 p-stack-lg z-20 text-white">
+<span class="bg-primary px-3 py-1 text-label-sm font-label-bold uppercase mb-stack-sm inline-block">Популярно</span>
+<h3 class="font-headline-md text-headline-md mb-stack-sm">Сезонная переобувка</h3>
+<p class="font-body-md max-w-md opacity-90">Быстрая и качественная замена резины с проверкой давления и состояния дисков.</p>
+</div>
+</div>
+<!-- Repair -->
+<div class="md:col-span-4 bg-on-background p-stack-lg flex flex-col justify-between group transition-colors hover:bg-primary">
+<span class="material-symbols-outlined text-primary group-hover:text-white text-[48px] transition-colors">build</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-white mb-stack-sm">Ремонт шин</h3>
+<p class="font-body-md text-surface-variant opacity-80 mb-stack-md group-hover:text-white">Устранение проколов, боковых порезов и грыж любой сложности.</p>
+<a class="text-primary group-hover:text-white font-label-bold flex items-center gap-2" href="#">Подробнее <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+</div>
+<!-- Balancing -->
+<div class="md:col-span-4 bg-surface p-stack-lg border border-outline-variant flex flex-col justify-between hover:border-primary transition-all">
+<div class="mb-stack-lg">
+<span class="material-symbols-outlined text-primary text-[48px]">balance</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-stack-sm">Балансировка</h3>
+<p class="font-body-md text-on-surface-variant">Устранение вибрации руля и продление срока службы подвески вашего авто.</p>
+</div>
+</div>
+<!-- Storage -->
+<div class="md:col-span-8 group relative h-[300px] overflow-hidden border border-outline-variant">
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/80 to-transparent z-10"></div>
+<div class="w-full h-full transition-transform duration-700 group-hover:scale-105" data-alt="A clean, organized storage facility for car tires. The tires are neatly stacked on industrial shelving units. The lighting is bright and uniform, showing a climate-controlled, professional environment. The atmosphere is reliable and orderly, reflecting high-quality service and care for customer property." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCPBxfbYjVDoS0AuZWjzSK8CHQ1WKtJa_Mag1wKzHqYCDybwMUTUbzXtdFBEwY-bYhCpCwTpW3OG8THmjc8J4KShZZNht0FsUReb5Lpv_OHyOxWUcCcuE9cII6nwxr_QLGJYnKVM6S1Cm2Q7wSx071Qgn_JY4CdnFu118Vzba1bL1fD6RJrBBARZks4Xj8ngSANjKy3VjRq3rQQksbN-T9Pe7lE6Zcjs4bRQq0quBeMiZ07bOAeGz1yqA')"></div>
+<div class="absolute inset-0 flex flex-col justify-center items-center z-20 text-white p-stack-lg text-center">
+<h3 class="font-headline-md text-headline-md mb-stack-sm">Сезонное хранение</h3>
+<p class="font-body-md max-w-lg opacity-90 mb-stack-lg">Правильные условия хранения ваших шин в сухом и темном помещении.</p>
+<a class="bg-primary text-on-primary px-8 py-3 font-label-bold hover:bg-white hover:text-primary transition-colors" href="https://wa.me/77769980634">Узнать цену</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Location Section -->
+<section class="py-section-gap px-margin-x" id="location">
+<div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-section-gap items-center">
+<div class="reveal">
+<span class="text-primary font-label-bold uppercase tracking-widest block mb-stack-sm">Где мы</span>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-stack-md leading-tight">Мы находимся здесь</h2>
+<div class="space-y-stack-md mb-stack-lg">
+<div class="flex items-start gap-4 p-4 bg-surface-container-low border-l-4 border-primary">
+<span class="material-symbols-outlined text-primary mt-1">location_on</span>
+<div>
+<p class="font-label-bold text-on-surface">Наш адрес:</p>
+<p class="text-on-surface-variant font-body-md">г. Житикара, ул. Байтурсынова, 11</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 border border-outline-variant">
+<span class="material-symbols-outlined text-primary mt-1">schedule</span>
+<div>
+<p class="font-label-bold text-on-surface">Режим работы:</p>
+<p class="text-on-surface-variant font-body-md">Пн-Вс: 09:00 — 20:00 (Без выходных)</p>
+</div>
+</div>
+</div>
+<a class="inline-flex items-center gap-3 bg-on-background text-white py-4 px-10 font-label-bold hover:bg-primary transition-all active:scale-95 group" href="https://www.google.com/maps/search/?api=1&amp;query=Житикара+Байтурсынова+11" target="_blank">
+                        Посмотреть на карте / Маршрут
+                        <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">map</span>
+</a>
+</div>
+<div class="h-[500px] bg-surface-dim relative overflow-hidden group">
+<img alt="Map Location" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" data-location="Zhitikara" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdBRL802oErbRsImk1sF_S0B62XFb4JHJHZpYaaV4rqSEGlJwzvvDinsQcK3AqSs34KXcp_Mxs4S7MNeLSPJBHn9Gd8pLfS-fjC_u8FFQwgs0D60s8wZDoccnRFjRIf1fWiwfImqoRzQ9pNCB_t65wb0y8u-E7ohuM71Ekae_9O0t8UMGOLyDQWBfHgKdV39RsWSGwMlJwZry5mkBNAor_2WbWI49F-tgXKc_aJ0cTbn4vHwk6fvjg2g"/>
+<div class="absolute inset-0 border-[16px] border-white z-10 pointer-events-none"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+<div class="relative">
+<div class="absolute -inset-4 bg-primary/20 rounded-full animate-ping"></div>
+<span class="material-symbols-outlined text-primary text-[48px] relative z-30" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA / Contact -->
+<section class="bg-primary py-section-gap px-margin-x text-on-primary">
+<div class="max-w-container-max mx-auto text-center">
+<h2 class="font-display-lg-mobile md:font-headline-md mb-stack-md">Остались вопросы или хотите записаться?</h2>
+<p class="font-body-lg text-primary-container mb-stack-lg max-w-2xl mx-auto opacity-90">Мы всегда на связи. Позвоните нам напрямую или напишите в удобный для вас мессенджер.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-gutter">
+<a class="flex items-center justify-center gap-3 bg-white text-primary px-10 py-5 font-headline-sm hover:bg-on-primary-container hover:text-white transition-all active:scale-95" href="tel:+77769980634">
+<span class="material-symbols-outlined">call</span>
+                        +7 (776) 998-06-34
+                    </a>
+<a class="flex items-center justify-center gap-3 bg-on-primary-fixed-variant text-white px-10 py-5 font-headline-sm hover:bg-on-secondary transition-all active:scale-95" href="https://wa.me/77769980634">
+<span class="material-symbols-outlined">chat</span>
+                        WhatsApp
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-inverse-surface dark:bg-surface-container-lowest text-surface-variant w-full py-stack-lg">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-x gap-stack-md max-w-container-max mx-auto">
+<div class="font-headline-sm text-headline-sm font-black text-surface-bright">
+                TireMaster
+            </div>
+<div class="flex gap-gutter font-label-sm text-label-sm">
+<a class="text-surface-variant/70 hover:text-surface-bright hover:underline transition-colors" href="#">Privacy Policy</a>
+<a class="text-surface-variant/70 hover:text-surface-bright hover:underline transition-colors" href="#">Terms of Service</a>
+<a class="text-primary-fixed dark:text-primary hover:underline transition-colors" href="https://wa.me/77769980634">WhatsApp Booking</a>
+</div>
+<div class="font-label-sm text-label-sm text-surface-variant/70">
+                © 2024 TireMaster Zhitikara. Professional Tire Care.
+            </div>
+</div>
+</footer>
+<script>
+        // Simple Intersection Observer for scroll reveals
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Mobile menu toggle logic
+        const menuBtn = document.getElementById('mobile-menu-toggle');
+        menuBtn.addEventListener('click', () => {
+            // Logic to open mobile menu could be added here
+            // For a single page minimalist landing, we'll keep it simple
+            console.log('Toggle menu');
+        });
+
+        // Micro-interaction for smooth scrolling links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body></html>
